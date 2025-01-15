@@ -13,7 +13,7 @@ Only return the final translated text:
     try:
         response = client.generate(model=model, prompt=prompt)
         # Add small delay to avoid overwhelming the model
-        # time.sleep(0.5)
+        time.sleep(0.5)
         return response['response'].strip()
     except Exception as e:
         print(f"Translation error: {e}")
